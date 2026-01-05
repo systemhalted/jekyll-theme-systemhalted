@@ -1,5 +1,4 @@
-# Systemhalted Theme
-[![Gem Version](https://badge.fury.io/rb/jekyll-theme-systemhalted.svg)](https://badge.fury.io/rb/jekyll-theme-systemhalted)
+# Systemhalted Theme [![Gem Version](https://badge.fury.io/rb/jekyll-theme-systemhalted.svg)](https://badge.fury.io/rb/jekyll-theme-systemhalted) 
 A Jekyll theme for personal blogs with a bold homepage grid, archive views, tags/categories, a search overlay, theme toggle, and optional Disqus comments.
 
 ## Features
