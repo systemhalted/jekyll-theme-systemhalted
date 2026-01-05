@@ -150,6 +150,11 @@ If deploying to GitHub Pages:
 - For `username.github.io`, set `url: https://username.github.io` and `baseurl: ""`.
 - For `username.github.io/repo`, set `url: https://username.github.io` and `baseurl: "/repo"`.
 
+
 ## Notes
 - Use relative URLs (`| relative_url`) for internal links and assets.
 - Keep filenames kebab-case and asset names short.
+
+## Screenshots
+
+!["Demo"](demo.png)
