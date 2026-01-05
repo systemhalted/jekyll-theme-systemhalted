@@ -80,6 +80,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     mercenary (0.4.0)
+    minitest (5.27.0)
     net-http (0.9.1)
       uri (>= 0.11.1)
     octokit (4.25.1)
@@ -112,6 +113,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.3)
   jekyll-theme-systemhalted!
+  minitest (~> 5.20)
   webrick
 
 BUNDLED WITH
