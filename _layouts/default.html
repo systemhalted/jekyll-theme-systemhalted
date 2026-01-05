@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us" class="theme-nord-light">
+
+  {% include head.html %}
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    {% include sidebar.html %}
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <div class="masthead-inner">
+            <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle sidebar" aria-controls="sidebar" aria-expanded="false" role="button" tabindex="0"></label>
+            <h3 class="masthead-title">
+              <a class="masthead-wordmark" href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+              {% if site.tagline %}
+              <span class="masthead-byline">{{ site.tagline }}</span>
+              {% endif %}
+            </h3>
+            <div class="masthead-actions">
+              <button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" title="Switch to dark mode">
+                <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                <span class="theme-toggle-label">Dark mode</span>
+              </button>
+              <button id="search-toggle" class="icon-button search-toggle" type="button" aria-expanded="false" aria-controls="search-overlay" aria-label="Open search" title="Search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Search</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="search-overlay" class="search-overlay" aria-hidden="true">
+        <div class="search-dialog" role="dialog" aria-modal="true" aria-label="Search">
+          <div class="search-header">
+            <label class="sr-only" for="search-input">Search posts</label>
+            <input id="search-input" class="search-input" type="search" placeholder="Search posts and notes..." autocomplete="off">
+            <button id="search-close" class="icon-button search-close" type="button" aria-label="Close search">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div id="search-status" class="search-status is-hidden" role="status" aria-live="polite"></div>
+          <div id="search-results" class="search-results">
+            <p class="search-empty">Type to search the archive.</p>
+          </div>
+        </div>
+      </div>
+
+      <main id="main-content" class="container content" tabindex="-1">
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
+    </div>
+
+    <script src="{{ '/assets/js/elasticlunr.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/search-data.js' | relative_url }}"></script>
+    <script src='{{ site.baseurl }}/assets/js/script.js'></script>
+    {% if site.disqus_shortname and page.layout == "post" and page.comments == true %}
+    <script id="dsq-count-scr" src="//{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
+    {% endif %}
+  </body>
+</html>

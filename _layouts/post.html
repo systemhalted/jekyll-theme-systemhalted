@@ -1,0 +1,108 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+
+  {% if page.featured_image %}
+  <figure class="post-featured">
+    <img src="{{ page.featured_image | relative_url }}" alt="{{ page.featured_image_alt | default: page.title }}">
+    {% if page.featured_image_caption %}
+    <figcaption>{{ page.featured_image_caption }}</figcaption>
+    {% endif %}
+  </figure>
+  {% endif %}
+
+  {% include share-buttons.html %}
+  <p> 
+  {{ content }}
+</div>
+
+<div class="post-categories">
+  {% if post %}
+    {% assign categories = post.categories %}
+  {% else %}
+    {% assign categories = page.categories %}
+  {% endif %}
+  {% for category in categories %}
+    <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+    {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
+</div>
+
+{% if post %}
+  {% assign tags = post.tags %}
+{% else %}
+  {% assign tags = page.tags %}
+{% endif %}
+{% if tags and tags != empty %}
+<div class="post-tags">
+  {% for tag in tags %}
+    <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
+    {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
+</div>
+{% endif %}
+
+{%- comment -%}
+  Build related posts by finding other posts in categories that share the same theme(s) as this page.
+{%- endcomment -%}
+{% assign themes = site.data.taxonomy.themes %}
+{% assign page_categories = page.categories %}
+{% if page_categories == nil or page_categories == empty %}
+  {% assign page_categories = post.categories %}
+{% endif %}
+{% if page_categories == nil %}
+  {% assign page_categories = "" | split: "" %}
+{% endif %}
+{% assign matched_theme_ids = "" | split: "," %}
+
+{% for theme in themes %}
+  {% assign has_match = false %}
+  {% for cat in theme.categories %}
+    {% if page_categories contains cat %}
+      {% assign has_match = true %}
+    {% endif %}
+  {% endfor %}
+  {% if has_match %}
+    {% assign matched_theme_ids = matched_theme_ids | push: theme.id %}
+  {% endif %}
+{% endfor %}
+
+{% assign theme_posts = "" | split: "" %}
+{% for theme in themes %}
+  {% if matched_theme_ids contains theme.id %}
+    {% for cat in theme.categories %}
+      {% assign cat_posts = site.categories[cat] %}
+      {% if cat_posts %}
+        {% assign theme_posts = theme_posts | concat: cat_posts %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% assign related_posts = theme_posts | uniq | sort: "date" | reverse %}
+{% assign related_posts = related_posts | where_exp: "related_post", "related_post.url != page.url" %}
+
+{% if related_posts.size >= 1 %}
+<div class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
+    {% for post in related_posts limit:5 %}
+      <li>
+        <h3>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+ {% if page.comments == true %}{% include comments.html %}{% endif %}
+ 
+{% endif %}

@@ -1,0 +1,17 @@
+---
+layout: page
+permalink: /featured/
+title: Featured Posts
+description: "An archive of posts sorted by date."
+---
+
+<ul class="post-list">
+{% for post in site.posts %}
+{% if post.featured %}
+<li>
+  <time class="post-list-date" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
+  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>

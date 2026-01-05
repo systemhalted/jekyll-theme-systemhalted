@@ -1,0 +1,63 @@
+# Setup
+title:               Lorem Ipsum
+tagline:             'quia est fas'
+description:         'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."'
+url:                 https://localhost:4000
+baseurl:             ''
+theme:              jekyll-theme-systemhalted
+paginate:            8
+permalink:           pretty
+#disqus_shortname:    <disqusshortname>
+
+# About/contact
+author:
+   name:              Joe Doe
+#  url:               
+#  email:             
+
+
+markdown: kramdown
+highlighter: rouge
+# Gems
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:year/:month/:day/:title/
+
+# Custom vars
+version:             1.0.0
+#google_analytics_id: 
+
+#google_site_verification: 
+
+feed:
+  posts_limit: 50
+  
+collections_dir: collections
+
+collections:
+#  newsletter:
+#    output: true
+
+
+sidebar:
+  items:
+    - title: "Home"
+      url: "/"
+    - title: "About"
+      url: "/about/"
+    - title: "Featured Posts"
+      url: "/featured/"
+    - title: "Archives"
+      url: "/archives/"
+    - title: "Categories"
+      url: "/categories/"
+    - title: "Tags"
+      url: "/tags/"
+
+    # add / remove / reorder as you like
