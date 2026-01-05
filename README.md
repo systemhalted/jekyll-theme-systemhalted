@@ -71,6 +71,10 @@ description: One-line summary for previews.
 Drafts live in `example/collections/_drafts/` for the demo site. Preview drafts with:
 `bundle exec jekyll serve --source example --destination example/_site --livereload --drafts`
 
+### Featured Images
+
+You can save your images anywhere. Just provide the correct link. For demo example, we have created an assets/images folder where demo images are currently saved. 
+
 ## Pages
 The demo site's pages live under `example/`. In your own site, create pages at your site root.
 Use `layout: page` for standard content pages or `layout: default` if you want a fully custom layout.
@@ -157,4 +161,9 @@ If deploying to GitHub Pages:
 
 ## Screenshots
 
-!["Demo"](demo.png)
+!["Demo"](docs/demo.png)
+!["Dark Demo"](docs/dark_demo.png)
+!["Demo Sidebar"](docs/demo_sidebar.png)
+!["Demo Post"](docs/demo_post.png)
+!["Dark Demo Post"](docs/dark_demo_post.png)
+!["Demo Archive"](docs/demo_archives.png)

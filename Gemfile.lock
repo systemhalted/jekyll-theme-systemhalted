@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-systemhalted (0.1.0)
+    jekyll-theme-systemhalted (0.1.1)
       jekyll (~> 4.3)
       jekyll-feed (~> 0.15)
       jekyll-gist (~> 1.5)
@@ -29,8 +29,12 @@ GEM
       logger
     faraday-net_http (3.4.2)
       net-http (~> 0.5)
+    ffi (1.17.3)
     ffi (1.17.3-x86_64-linux-gnu)
     forwardable-extended (2.6.0)
+    google-protobuf (4.33.2)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.33.2-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)
@@ -96,6 +100,9 @@ GEM
     rexml (3.4.4)
     rouge (4.7.0)
     safe_yaml (1.0.5)
+    sass-embedded (1.97.1)
+      google-protobuf (~> 4.31)
+      rake (>= 13)
     sass-embedded (1.97.1-x86_64-linux-gnu)
       google-protobuf (~> 4.31)
     sawyer (0.9.3)
@@ -108,6 +115,7 @@ GEM
     webrick (1.9.2)
 
 PLATFORMS
+  ruby
   x86_64-linux-gnu
 
 DEPENDENCIES
