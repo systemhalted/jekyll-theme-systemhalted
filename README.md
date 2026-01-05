@@ -43,6 +43,10 @@ The demo site lives in `example/`. To preview the theme locally:
 
 Jekyll outputs to `_site/` in the source directory. Do not edit generated files directly.
 
+## Tests
+Run the test suite:
+`bundle exec ruby -Itest -Ilib test/*_test.rb`
+
 ## Writing posts
 In the demo site, posts live in `example/collections/_posts/` and use the filename format `YYYY-MM-DD-title.md`.
 In your own site, follow your configured `collections_dir`.
