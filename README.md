@@ -79,13 +79,45 @@ You can save your images anywhere. Just provide the correct link. For demo examp
 The demo site's pages live under `example/`. In your own site, create pages at your site root.
 Use `layout: page` for standard content pages or `layout: default` if you want a fully custom layout.
 
-Key pages included in the demo site (copy these into your own site if you want them):
-- `index.html`: paginated home grid.
-- `archives.html`: year-grouped archive with client-side sorting.
-- `categories.html`: category taxonomy grouped by theme.
-- `tags.html`: tag archive.
-- `featured.html`: posts with `featured: true`.
-- `about.md`, `404.md`: static pages.
+The theme provides layouts for the common archive pages, so you only need a front-matter stub (no HTML):
+```yaml
+# index.html
+---
+layout: index
+title: Home
+---
+
+# archives.md
+---
+layout: archives
+title: Archives
+---
+
+# categories.md
+---
+layout: categories
+title: Categories
+permalink: /categories/
+---
+
+# tags.md
+---
+layout: tags
+title: Tags
+---
+```
+
+Key layouts included in the theme:
+- `layout: index`: paginated home grid.
+- `layout: archives`: year-grouped archive with client-side sorting.
+- `layout: categories`: category taxonomy grouped by theme.
+- `layout: tags`: tag archive.
+- `layout: about`: standard about page (markdown content goes in the page file).
+- `layout: page`, `layout: default`: generic pages.
+
+Featured posts and error pages are still demo templates you can copy:
+- `example/featured.html`: posts with `featured: true`.
+- `example/404.md`: not found page.
 
 ## Collections
 Collections live under `example/collections/` in the demo site (see `collections_dir` in `example/_config.yml`).
@@ -123,8 +155,8 @@ sidebar:
 The sidebar also includes an "Annotate me" toggle that loads Hypothes.is on demand. Remove it from `_includes/sidebar.html` if you do not want annotation support.
 
 ## Categories and tags
-Category themes are defined in `_data/taxonomy.yml` and used on `categories.html` and in related-post logic.
-Tags are generated from post front matter and listed on `tags.html`.
+Category themes are defined in `_data/taxonomy.yml` and used on the `categories` layout and in related-post logic.
+Tags are generated from post front matter and listed on the `tags` layout.
 
 ## Comments and analytics
 Disqus comments are supported:
