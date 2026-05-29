@@ -11,6 +11,11 @@ jobs:
 
     environment: release
 
+    # Opt the action's bundled JS sub-actions into Node.js 24 ahead of the
+    # June 2, 2026 forced cutover (silences the Node 20 deprecation warning).
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
     permissions:
       contents: read    # tag already exists (created by the Release); no push needed
       id-token: write   # OIDC token for Trusted Publishing
