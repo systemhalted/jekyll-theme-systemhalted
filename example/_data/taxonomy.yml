@@ -1,0 +1,10 @@
+themes:
+  - id: features
+    title: "Theme Features"
+    description: "Everything System Halted can do, one post at a time."
+    categories:
+      - "Getting Started"
+      - "Search"
+      - "Theming"
+      - "Organization"
+      - "Writing"

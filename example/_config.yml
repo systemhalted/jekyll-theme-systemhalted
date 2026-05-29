@@ -1,7 +1,7 @@
 # Setup
-title:               Lorem Ipsum
-tagline:             'quia est fas'
-description:         'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."'
+title:               System Halted
+tagline:             'A Nord-flavored Jekyll theme for writers and developers'
+description:         'System Halted is a fast, accessible Jekyll theme with built-in client-side search, a light/dark Nord palette, a responsive card grid, taxonomy-driven categories, tags, archives, and SEO out of the box.'
 url:                 https://systemhalted.in
 baseurl:             /jekyll-theme-systemhalted
 theme:              jekyll-theme-systemhalted
@@ -11,7 +11,7 @@ permalink:           pretty
 
 # About/contact
 author:
-   name:              Joe Doe
+   name:              Jane Doe
 #  url:               
 #  email:             
 
