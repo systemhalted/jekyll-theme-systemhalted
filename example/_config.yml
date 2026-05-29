@@ -2,8 +2,8 @@
 title:               Lorem Ipsum
 tagline:             'quia est fas'
 description:         'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."'
-url:                 https://localhost:4000
-baseurl:             ''
+url:                 https://systemhalted.in
+baseurl:             /jekyll-theme-systemhalted
 theme:              jekyll-theme-systemhalted
 paginate:            8
 permalink:           pretty
