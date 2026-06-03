@@ -193,9 +193,9 @@ If deploying to GitHub Pages:
 
 ## Screenshots
 
-!["Demo"](docs/demo.png)
-!["Dark Demo"](docs/dark_demo.png)
-!["Demo Sidebar"](docs/demo_sidebar.png)
-!["Demo Post"](docs/demo_post.png)
-!["Dark Demo Post"](docs/dark_demo_post.png)
-!["Demo Archive"](docs/demo_archives.png)
+!["Demo"](https://raw.githubusercontent.com/systemhalted/jekyll-theme-systemhalted/main/docs/demo.png)
+!["Dark Demo"](https://raw.githubusercontent.com/systemhalted/jekyll-theme-systemhalted/main/docs/dark_demo.png)
+!["Demo Sidebar"](https://raw.githubusercontent.com/systemhalted/jekyll-theme-systemhalted/main/docs/demo_sidebar.png)
+!["Demo Post"](https://raw.githubusercontent.com/systemhalted/jekyll-theme-systemhalted/main/docs/demo_post.png)
+!["Dark Demo Post"](https://raw.githubusercontent.com/systemhalted/jekyll-theme-systemhalted/main/docs/dark_demo_post.png)
+!["Demo Archive"](https://raw.githubusercontent.com/systemhalted/jekyll-theme-systemhalted/main/docs/demo_archives.png)
